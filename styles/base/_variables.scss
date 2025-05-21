@@ -2,4 +2,44 @@
   // #### FONTS ####
   --font-primary: "Merriweather", serif;
   --font-secondary: "Roboto", sans-serif;
+
+  // #### COLORS ####
+
+  --primary-color: #022b61;
+  --secondary-color: #022b61;
+
+  --dark-blue: #04367d;
+  --black: #000000;
+  --light-blue: #10b1e9;
+  --light-green: #9bdd34;
+  --dark-green: #233803;
+
+  // #### MAIN MENU ####
+
+  --menu-border-radius: 8px;
+
+  --tools-menu-bg: var(--light-blue);
+  --tools-menu-color: var(--black);
+  --tools-menu-width: clamp(
+    15.625rem,
+    13.621rem + 3.23vw,
+    17.5rem
+  ); // 250-280px
+
+  --menu-bg: var(--light-green);
+  --menu-color: var(--primary-color);
+
+  --menu-color-hover: var(--light-blue);
+  --menu-color-active: var(--light-blue);
+
+  --menu-padding: 20px 0;
+
+  // #### ASIDE MENU ####
+
+  --aside-menu-width: var(--tools-menu-width);
+
+  // #### FOOTER ####
+
+  --footer-bg-bottom: var(--dark-green);
+  --footer-socials-color: rgba(255, 255, 255, 0.55);
 }
