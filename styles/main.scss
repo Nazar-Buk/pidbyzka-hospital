@@ -1,0 +1,7 @@
+@use "./base/index" as base;
+
+[class*="__container"] {
+  max-width: 1230px; // 1200px + 15px + 15px
+  margin: 0 auto;
+  padding: 0 15px;
+}
