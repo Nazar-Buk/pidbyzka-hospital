@@ -1,4 +1,4 @@
-name: Deploy to InfinityFree via FTP
+name: Deploy to FreeHostingNoAds via FTP
 
 on:
   push:
@@ -20,4 +20,4 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /home/www/
+          server-dir: /test-hospitals.atwebpages.com/
