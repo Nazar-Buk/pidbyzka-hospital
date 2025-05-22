@@ -27,3 +27,7 @@ if (mainMenuBox) {
     }
   });
 }
+
+const footerYear = document.getElementById("current-year");
+const currentYear = new Date().getFullYear();
+footerYear.textContent = currentYear;
