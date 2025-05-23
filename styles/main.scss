@@ -53,9 +53,6 @@ body {
       }
 
       .box__container nav.main-navigation-bar {
-        // position: sticky;
-        // top: 0;
-
         &.fixed {
           position: fixed;
           top: 0;
@@ -63,6 +60,7 @@ body {
           width: 100%;
           border-top-left-radius: 0;
           border-top-right-radius: 0;
+          z-index: 10;
 
           .tools {
             border-top-left-radius: 0;
@@ -126,12 +124,140 @@ body {
       }
     }
 
-    main {
+    main.main__container {
+      display: flex;
+
+      aside.aside {
+        width: var(--aside-menu-width);
+        padding-top: 5px;
+        padding-bottom: 30px;
+        background-color: var(--secondary-color);
+
+        ul.left-menu {
+          margin-bottom: 40px;
+
+          a {
+            display: block;
+            padding: 15px 35px 0 20px;
+            color: var(--light-dark);
+
+            .link-text {
+              border-bottom: 1px solid var(--light-gray);
+              padding-bottom: 15px;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+
+              i {
+                color: var(--light-gray);
+                font-size: 14px;
+              }
+            }
+
+            &:hover {
+              color: var(--primary-color);
+            }
+          }
+
+          li.left-menu__list {
+            position: relative;
+
+            &:hover > ul.menu-level-2 {
+              display: block;
+            }
+
+            a.left-menu__item {
+            }
+
+            ul.menu-level-2 {
+              display: none;
+              position: absolute;
+              top: 0;
+              left: 97%;
+              width: var(--aside-menu-width);
+              background-color: var(--second-level-menu-bg);
+              padding-bottom: 15px;
+
+              &::before {
+                content: "";
+                position: absolute;
+                top: 17px;
+                left: -8px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 6px 8px 6px 0;
+                border-color: transparent var(--second-level-menu-bg)
+                  transparent transparent;
+              }
+
+              li.menu-level-2__list {
+                position: relative;
+
+                &:hover > ul.menu-level-3 {
+                  display: block;
+                }
+
+                a.menu-level-2__item {
+                }
+
+                ul.menu-level-3 {
+                  display: none;
+                  position: absolute;
+                  top: 0;
+                  left: 97%;
+                  background-color: var(--third-level-menu-bg);
+                  width: var(--aside-menu-width);
+                  padding-bottom: 15px;
+
+                  &::before {
+                    content: "";
+                    position: absolute;
+                    top: 17px;
+                    left: -8px;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 6px 8px 6px 0;
+                    border-color: transparent var(--third-level-menu-bg)
+                      transparent transparent;
+                  }
+
+                  li .menu-level-3__list {
+                    a.menu-level-3__item {
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .useful-links-box {
+          padding: 0 15px;
+
+          p {
+            margin-bottom: 15px;
+            color: var(--light-gray);
+          }
+
+          .wrap-links {
+            a.link {
+              display: block;
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+
+      .page {
+        flex-grow: 1;
+        background-color: var(--secondary-color);
+        z-index: -1;
+      }
     }
 
     footer.footer {
-      // padding-top: 20px;
-
       .footer-top {
         background: linear-gradient(
           to bottom,
