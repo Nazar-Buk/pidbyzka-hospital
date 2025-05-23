@@ -6,13 +6,15 @@
   // #### COLORS ####
 
   --primary-color: #022b61;
-  --secondary-color: #022b61;
+  --secondary-color: #ffffff;
 
   --dark-blue: #04367d;
   --black: #000000;
+  --light-dark: #333333;
   --light-blue: #10b1e9;
   --light-green: #9bdd34;
   --dark-green: #233803;
+  --light-gray: rgb(165, 165, 165);
 
   // #### MAIN MENU ####
 
@@ -37,6 +39,9 @@
   // #### ASIDE MENU ####
 
   --aside-menu-width: var(--tools-menu-width);
+
+  --second-level-menu-bg: rgb(234, 234, 234);
+  --third-level-menu-bg: rgb(218, 218, 218);
 
   // #### FOOTER ####
 
