@@ -124,7 +124,7 @@ body {
       }
     }
 
-    main.main__container {
+    .wrap-aside-pages__container {
       display: flex;
 
       aside.aside {
@@ -250,7 +250,7 @@ body {
         }
       }
 
-      .page {
+      main.page {
         flex-grow: 1;
         background-color: var(--secondary-color);
         z-index: -1;
